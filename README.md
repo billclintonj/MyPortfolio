@@ -1,2 +1,1 @@
-# MyPortfolio
-This repo contains my profile
+# Clinton wedding invitation
