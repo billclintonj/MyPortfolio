@@ -31,7 +31,8 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-image: url('./../assets/Images/Invitation_background_image.png');
+                background-image: url('./assets/Images/Invitation_background_image.png');
+                /* background-image: url('./../assets/Images/Invitation_background_image.png'); */
                 background-size: cover;
                 background-position: center;
                 filter: blur(2px);
@@ -44,7 +45,8 @@
                 z-index: 1;
                 text-align: center;
                 color: #4a4a4a;
-                padding: 20px;
+                padding: 20px 5px;
+                padding-bottom: 10rem;
             }
             
             /* Bride and Groom Image */
@@ -114,6 +116,9 @@
                 background-color: #831f1f;
                 border: none;
                 padding: 10px;
+                border-radius: 30px;
+                cursor: pointer;
+                max-width: 300px;
             }
             
             .button_class:hover {
@@ -138,37 +143,110 @@
             .card_content_margin{
                 margin: -50px 0px;
             }
+
+            .border_left_image{
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
+
+            .border_bottom_image{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                z-index: -1;
+            }
+
+            .border_image_size{
+                width: 100%;
+                height: 100%;
+                opacity: 0.8;
+            }
+            .golden_border{
+                border-top: 2px solid goldenrod;
+                border-bottom: 2px solid goldenrod;
+                padding: 5px 10px 10px 10px;
+            }
+
+            .date_color{
+                color: goldenrod;
+                font-family: 'cursive';
+                font-size: 30px !important;
+                padding: 5px 10px 10px 10px;
+            }
+
+            .reception_color{
+                color: goldenrod;
+                font-family: 'cursive';
+                font-weight: 800;
+                font-size: 30px !important;
+                padding: 10px
+            }
+            .gold_color{
+                color: goldenrod;
+            }
+
+            a {
+                pointer-events: auto !important;
+            }
         </style>
     </head>
     <body>
         <div class="wedding-container">
             <!-- Background Image -->
             <div class="background-image"></div>
-          
             <!-- Overlay Content -->
             <div class="content-container">
+                <div class="border_left_image">
+                    <img src="assets/Images/Invitation-top-left.png" alt="Bride and Groom Info" class="border_image_size" />
+                </div>
+                <div class="border_bottom_image">
+                    <img src="assets/Images/Invitation-bottom-right.png" alt="Bride and Groom Info" class="border_image_size" />
+                </div>
               <!-- Bride & Groom Image -->
               <img src="assets/Images/invitation_info.png" alt="Bride and Groom Info" class="bride-groom-image" />
           
               <!-- Event Details -->
-              <div class="card my-3 p-3">
-                <h3 class="mb-2 date_heading  ">Monday, Feb 10, 2025</h3>
-                <a class="btn w-100 my-2 button_class" title="click here to view the map location"
-                href="https://maps.app.goo.gl/yyhJQdyppBZA9PDV6" target="_blank"> <i class="fa-solid fa-location-dot location_icon_padding"></i> Wedding - Holy Eucharist church
-                       
-              </a>
-                <a class="btn w-100 my-2 button_class" title="click here to view the map location"
-                href="https://maps.app.goo.gl/3coiqS3EegxQtdc46" target="_blank">
-                        <i class="fa-solid fa-location-dot location_icon_padding"></i> Reception - Mangalam Mahal
-            </a>
+              <div class="card p-3">
+                <h3 class="reception_color ps-5">WEDDING</h3>
+                <h3 class="mb-4 date_heading  ps-4">FEBRUARY</h3>
+                <h5 class=" date_heading  "><span class="golden_border">Monday</span> <span class="date_color">10</span> <span class="golden_border">2025</span></h5>
+                <div class="row  mt-4">
+                    <div class="col-12 mb-4">
+                        <div class="date_heading">WEDDING AT 4 PM </div>
+                        <div class="date_heading gold_color">Holy Eucharist church, Chennai.</div>
+                            <a class="btn w-100 my-2 button_class" title="click here to view the map location" onclick="window.open(this.href,'_blank'); return false;"
+                                href="https://maps.app.goo.gl/yyhJQdyppBZA9PDV6" target="_blank"> <i class="fa-solid fa-location-dot location_icon_padding"></i> Wedding
+                                    
+                            </a>
+                    </div>
+                    <div class="col-12">
+                        <div class="date_heading">RECEPTION AT 7 PM</div>
+                        <div class="date_heading gold_color">Mangalam Thirumana Mahal, Chennai.</div>
+                            <a class="btn w-100 my-2 button_class" title="click here to view the map location"
+                                href="https://maps.app.goo.gl/3coiqS3EegxQtdc46" target="_blank">
+                                        <i class="fa-solid fa-location-dot location_icon_padding"></i> Reception
+                            </a>
+                    </div>
+                </div>
+                
+                
               </div>
             
               <div class="card my-3 p-3">
-                <h3 class="mb-2 date_heading">Sunday, Feb 16, 2025</h3>
-                <a class="btn w-100 button_class" title="click here to view the map location"
-                href=" https://maps.app.goo.gl/SPtC9hiqGZPJ6d7i8" target="_blank">
-                        <i class="fa-solid fa-location-dot location_icon_padding"></i> Reception - Puliyankudi
-              </a>
+                <h3 class="reception_color ps-5">RECEPTION</h3>
+                <h3 class="mb-4 date_heading  ps-4">FEBRUARY</h3>
+                <h5 class=" date_heading  "><span class="golden_border">Sunday</span> <span class="date_color">16</span> <span class="golden_border">2025</span></h5>
+                <!-- <h3 class="mb-2 date_heading">Sunday, Feb 16, 2025</h3> -->
+                 <div class="date_heading m-2">AT 10:45 AM</div>
+                 <div class="date_heading gold_color">NVS Kamarajar Marriage Hall, Puliyangudi.</div>
+                 <div>
+                    <a class="btn w-100 my-2 button_class" title="click here to view the map location"
+                    href=" https://maps.app.goo.gl/SPtC9hiqGZPJ6d7i8" target="_blank">
+                            <i class="fa-solid fa-location-dot location_icon_padding"></i> Reception
+                  </a>
+                 </div>
               </div>
             </div>
           </div>
